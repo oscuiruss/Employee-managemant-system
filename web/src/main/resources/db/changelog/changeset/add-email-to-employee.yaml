@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-email-to-employee
+      author: Olga Stepanova
+      changes:
+        - addColumn:
+            tableName: employees
+            columns:
+              - column:
+                  name: email
+                  type: varchar(20)
+                  constraints:
+                    nullable: true

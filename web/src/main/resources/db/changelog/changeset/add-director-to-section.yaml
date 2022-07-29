@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-column-to-section
+      author: Olga Stepanova
+      changes:
+        - addColumn:
+            tableName: sections
+            columns:
+              - column:
+                  name: dir_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: dir_section_fk
+                    referencedTableName: sections
+                    referencedColumnNames: id

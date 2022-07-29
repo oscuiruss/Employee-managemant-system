@@ -1,3 +1,17 @@
 databaseChangeLog:
   - include:
       file: db/changelog/changeset/create-employee-table.yaml
+  - include:
+      file: db/changelog/changeset/create-section-table.yaml
+  - include:
+      file: db/changelog/changeset/create-department-table.yaml
+  - include:
+      file: db/changelog/changeset/add-director-to-department.yaml
+  - include:
+      file: db/changelog/changeset/add-director-to-section.yaml
+  - include:
+      file: db/changelog/changeset/add-section-to-employee.yaml
+  - include:
+      file: db/changelog/changeset/add-department-to-section.yaml
+  - include:
+      file: db/changelog/changeset/add-email-to-employee.yaml

@@ -29,11 +29,11 @@ public class Section {
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "dep_id")
+//    @JoinColumn(name = "dep_id")
     private Department department;
 
-
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "section")
+ //mappedBy = "section"
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Employee> employees = new ArrayList<>();
 
     public Section(String name) {

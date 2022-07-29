@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: rename-col
+      author: Olga Stepanova
+      changes:
+        - renameColumn:
+            tableName: employees
+            newColumnName: section_id
+            oldColumnName: sec_id

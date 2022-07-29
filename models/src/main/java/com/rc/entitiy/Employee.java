@@ -25,7 +25,7 @@ public class Employee{
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "sec_id")
+//    @JoinColumn(name = "sec_id")
     private Section section;
 
     public Employee(String name, String email) {

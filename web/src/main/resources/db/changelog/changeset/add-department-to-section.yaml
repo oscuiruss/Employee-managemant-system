@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-department-to-section
+      author: Olga Stepanova
+      changes:
+        - addColumn:
+            tableName: sections
+            columns:
+              - column:
+                  name: dep_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: dep_section_fk
+                    referencedTableName: departments
+                    referencedColumnNames: id

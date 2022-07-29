@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-column-to-department
+      author: Olga Stepanova
+      changes:
+        - addColumn:
+            tableName: departments
+            columns:
+              - column:
+                  name: dir_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: dir_department_fk
+                    referencedTableName: employees
+                    referencedColumnNames: id

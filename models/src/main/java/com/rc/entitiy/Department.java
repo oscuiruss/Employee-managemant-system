@@ -23,7 +23,7 @@ public class Department {
 
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "dir_id")
+//    @JoinColumn(name = "dir_id")
     private Employee director;
 
 

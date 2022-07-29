@@ -125,9 +125,6 @@ public class SectionControllerTest {
         given(sectionService.update(section, 1, 1, 1)).willReturn(section);
         ResponseEntity<SectionDTO> sectionResponse = restTemplate.postForEntity(ALL_SECTIONS_RESOURCE_URL + "/1",
                 new SectionDTO(1, "Section2", 1, employeeDTOS, 1), SectionDTO.class);
-        System.out.println("section response = " + sectionResponse.getBody());
-        System.out.println(sectionResponse.getStatusCode());
-        System.out.println(sectionResponse.getStatusCodeValue());
         assertThat(sectionResponse.getBody().getName()).isEqualTo("Section2");
     }
 

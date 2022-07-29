@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-section-to-employee
+      author: Olga Stepanova
+      changes:
+        - addColumn:
+            tableName: employees
+            columns:
+              - column:
+                  name: sec_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: sec_employee_fk
+                    referencedTableName: sections
+                    referencedColumnNames: id
