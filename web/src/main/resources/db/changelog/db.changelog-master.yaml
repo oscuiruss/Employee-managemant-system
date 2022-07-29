@@ -15,3 +15,7 @@ databaseChangeLog:
       file: db/changelog/changeset/add-department-to-section.yaml
   - include:
       file: db/changelog/changeset/add-email-to-employee.yaml
+  - include:
+      file: db/changelog/changeset/employee-rename-column.yaml
+  - include:
+      file: db/changelog/changeset/section-rename-column.yaml
